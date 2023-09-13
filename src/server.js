@@ -14,9 +14,9 @@ mongoose.connect(process.env.MONGODB_URL, {
 console.log("Connected to mongoose");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json()); // For parsing JSON requests
-
 app.use("/auth", authRoutes);
 
 const PORT = process.env.PORT || 8080;
